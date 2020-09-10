@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Elistia.DotNetRtfWriter
+namespace Openware.RTFWriter
 {
     /// <summary>
     /// A container for an array of content blocks. For example, a footnote
@@ -82,7 +82,7 @@ namespace Elistia.DotNetRtfWriter
             }
         }
 
-        private void addBlock(RtfBlock block)
+        private void AddBlock(RtfBlock block)
         {
             if (block != null) {
                 _blocks.Add(block);
@@ -93,23 +93,23 @@ namespace Elistia.DotNetRtfWriter
         /// Add a paragraph to this container.
         /// </summary>
         /// <returns>Paragraph being added.</returns>
-        public RtfParagraph addParagraph()
+        public RtfParagraph AddParagraph()
         {
             if (!_allowParagraph) {
                 throw new Exception("Paragraph is not allowed.");
             }
             RtfParagraph block = new RtfParagraph(_allowFootnote, _allowControlWord);
-            addBlock(block);
+            AddBlock(block);
             return block;
         }
 
         /// <summary>
         /// Add a section to this container
         /// </summary>
-        public RtfSection addSection(SectionStartEnd type, RtfDocument doc)
+        public RtfSection AddSection(SectionStartEnd type, RtfDocument doc)
         {
             var block = new RtfSection(type, doc);
-            addBlock(block);
+            AddBlock(block);
             return block;
         }
 
@@ -119,13 +119,13 @@ namespace Elistia.DotNetRtfWriter
         /// <param name="imgFname">Filename of the image.</param>
         /// <param name="imgType">File type of the image.</param>
         /// <returns>Image being added.</returns>
-        public RtfImage addImage(string imgFname, ImageFileType imgType)
+        public RtfImage AddImage(string imgFname, ImageFileType imgType)
         {
             if (!_allowImage) {
                 throw new Exception("Image is not allowed.");
             }
             RtfImage block = new RtfImage(imgFname, imgType);
-            addBlock(block);
+            AddBlock(block);
             return block;
         }
 
@@ -134,7 +134,7 @@ namespace Elistia.DotNetRtfWriter
         /// </summary>
         /// <param name="imgFname">Filename of the image.</param>
         /// <returns>Image being added.</returns>
-        public RtfImage addImage(string imgFname)
+        public RtfImage AddImage(string imgFname)
         {
             int dot = imgFname.LastIndexOf(".");
             if (dot < 0)
@@ -148,11 +148,11 @@ namespace Elistia.DotNetRtfWriter
             {
                 case "jpg":
                 case "jpeg":
-                    return addImage(imgFname, ImageFileType.Jpg);
+                    return AddImage(imgFname, ImageFileType.Jpg);
                 case "gif":
-                    return addImage(imgFname, ImageFileType.Gif);
+                    return AddImage(imgFname, ImageFileType.Gif);
                 case "png":
-                    return addImage(imgFname, ImageFileType.Png);
+                    return AddImage(imgFname, ImageFileType.Png);
                 default:
                     throw new Exception("Cannot determine image type from the filename extension: "
                                         + imgFname);
@@ -164,14 +164,14 @@ namespace Elistia.DotNetRtfWriter
         /// </summary>
         /// <param name="imageStream">MemoryStream containing image.</param>
         /// <returns>Image being added.</returns>
-        public RtfImage addImage(System.IO.MemoryStream imageStream)
+        public RtfImage AddImage(System.IO.MemoryStream imageStream)
         {
             if (!_allowImage)
             {
                 throw new Exception("Image is not allowed.");
             }
             RtfImage block = new RtfImage(imageStream);
-            addBlock(block);
+            AddBlock(block);
             return block;
         }
 
@@ -183,13 +183,13 @@ namespace Elistia.DotNetRtfWriter
         /// <param name="horizontalWidth">Horizontabl width (in points) of the table.</param>
         /// <param name="fontSize">The size of font used in this table. This is used to calculate margins.</param>
         /// <returns>Table begin added.</returns>
-        public RtfTable addTable(int rowCount, int colCount, float horizontalWidth, float fontSize)
+        public RtfTable AddTable(int rowCount, int colCount, float horizontalWidth, float fontSize)
         {
             if (!_allowTable) {
                 throw new Exception("Table is not allowed.");
             }
             RtfTable block = new RtfTable(rowCount, colCount, horizontalWidth, fontSize);
-            addBlock(block);
+            AddBlock(block);
             return block;
         }
         
@@ -198,10 +198,10 @@ namespace Elistia.DotNetRtfWriter
         /// Transfer all content blocks to another RtfBlockList object.
         /// </summary>
         /// <param name="target">Target RtfBlockList object to transfer to.</param>
-        internal void transferBlocksTo(RtfBlockList target)
+        internal void TransferBlocksTo(RtfBlockList target)
         {
             for (int i = 0; i < _blocks.Count; i++) {
-                target.addBlock(_blocks[i]);
+                target.AddBlock(_blocks[i]);
             }
             _blocks.Clear();
         }
@@ -211,7 +211,7 @@ namespace Elistia.DotNetRtfWriter
         /// Emit RTF code.
         /// </summary>
         /// <returns>Resulting RTF code for this object.</returns>
-        public override string render()
+        public override string Render()
         {
             StringBuilder result = new StringBuilder();
             
@@ -220,7 +220,7 @@ namespace Elistia.DotNetRtfWriter
                 if (_defaultCharFormat != null && _blocks[i].DefaultCharFormat != null) {
                     _blocks[i].DefaultCharFormat.copyFrom(_defaultCharFormat);
                 }
-                result.AppendLine(_blocks[i].render());
+                result.AppendLine(_blocks[i].Render());
             }
             return result.ToString();
         }

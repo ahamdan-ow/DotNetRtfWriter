@@ -1,7 +1,7 @@
 using System;
 using System.Configuration;
 
-namespace Elistia.DotNetRtfWriter
+namespace Openware.RTFWriter
 {
     /// <summary>
     /// Internal use only.
@@ -10,11 +10,10 @@ namespace Elistia.DotNetRtfWriter
     abstract public class RtfRenderable
     {
         /// <summary>
-        /// Internal use only.
-        /// Emit RTF code.
+        /// Returns RTF code.
         /// </summary>
         /// <returns>RTF code</returns>
-        abstract public string render();
+        abstract public string Render();
     }
 
     /// <summary>

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Elistia.DotNetRtfWriter
+namespace Openware.RTFWriter
 {
     /// <summary>
     /// Summary description for RtfHeaderFooter
@@ -21,7 +21,7 @@ namespace Elistia.DotNetRtfWriter
             _type = type;
         }
 
-        public override string render()
+        public override string Render()
         {
             StringBuilder result = new StringBuilder();
 
@@ -38,7 +38,7 @@ namespace Elistia.DotNetRtfWriter
                     && ((RtfBlock)base._blocks[i]).DefaultCharFormat != null) {
                     ((RtfBlock)base._blocks[i]).DefaultCharFormat.copyFrom(base._defaultCharFormat);
                 }
-                result.AppendLine(((RtfBlock)_blocks[i]).render());
+                result.AppendLine(((RtfBlock)_blocks[i]).Render());
             }
             result.AppendLine("}");
             return result.ToString();

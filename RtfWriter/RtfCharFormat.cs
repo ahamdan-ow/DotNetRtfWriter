@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Text;
 
-namespace Elistia.DotNetRtfWriter
+namespace Openware.RTFWriter
 {
     /// <summary>
     /// Summary description for RtfCharFormat
@@ -240,7 +240,7 @@ namespace Elistia.DotNetRtfWriter
                 }
             }
             if (_fontSize > 0) {
-                result.Append(@"\fs" + RtfUtility.pt2HalfPt(_fontSize));
+                result.Append(@"\fs" + RtfUtility.PointToHalfPoint(_fontSize));
             }
             if (_fgColor != null) {
                 result.Append(@"\cf" + _fgColor.Value);

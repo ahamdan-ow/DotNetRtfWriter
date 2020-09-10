@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Elistia.DotNetRtfWriter
+namespace Openware.RTFWriter
 {
     public class RtfFieldControlWord : RtfRenderable
     {
@@ -40,7 +40,7 @@ namespace Elistia.DotNetRtfWriter
             }
         }
         
-        public override string render()
+        public override string Render()
         {
             return ControlWordPool[(int)_type];
         }

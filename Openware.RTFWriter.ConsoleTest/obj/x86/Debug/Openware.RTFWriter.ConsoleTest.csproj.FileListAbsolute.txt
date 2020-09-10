@@ -1,0 +1,10 @@
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\bin\x86\Debug\Openware.RTFWriter.ConsoleTest.exe.config
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\bin\x86\Debug\Openware.RTFWriter.ConsoleTest.exe
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\bin\x86\Debug\Openware.RTFWriter.ConsoleTest.pdb
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\bin\x86\Debug\Openware.RTFWriter.dll
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\bin\x86\Debug\Openware.RTFWriter.pdb
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\obj\x86\Debug\Openware.RTFWriter.ConsoleTest.csprojAssemblyReference.cache
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\obj\x86\Debug\Openware.RTFWriter.ConsoleTest.csproj.CoreCompileInputs.cache
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\obj\x86\Debug\Openware.RTFWriter.ConsoleTest.csproj.CopyComplete
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\obj\x86\Debug\Openware.RTFWriter.ConsoleTest.exe
+D:\Projects\RTFWriter\Openware.RTFWriter.ConsoleTest\obj\x86\Debug\Openware.RTFWriter.ConsoleTest.pdb

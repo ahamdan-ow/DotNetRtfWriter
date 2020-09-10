@@ -1,7 +1,7 @@
 using System;
 using System.Configuration;
 
-namespace Elistia.DotNetRtfWriter
+namespace Openware.RTFWriter
 {
     /// <summary>
     /// Horizontal alignment.

@@ -2,7 +2,7 @@ using System;
 using System.Configuration;
 using System.Text;
 
-namespace Elistia.DotNetRtfWriter
+namespace Openware.RTFWriter
 {
     /// <summary>
     /// Summary description for RtfTableCell
@@ -150,7 +150,7 @@ namespace Elistia.DotNetRtfWriter
             this.Borders[Direction.Right].Color = color;
         }
 
-        public override string render()
+        public override string Render()
         {
             StringBuilder result = new StringBuilder();
             string align = "";
@@ -200,7 +200,7 @@ namespace Elistia.DotNetRtfWriter
                         block.BlockHead = @"\par" + align;
                     }
                     block.BlockTail = "";
-                    result.AppendLine(block.render());
+                    result.AppendLine(block.Render());
                 }
             }
             

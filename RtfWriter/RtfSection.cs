@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace Elistia.DotNetRtfWriter
+namespace Openware.RTFWriter
 {
     public class RtfSection : RtfBlock
     {
@@ -55,7 +55,7 @@ namespace Elistia.DotNetRtfWriter
 
         private RtfDocument ParentDocument { get; set; }
 
-        public override string render()
+        public override string Render()
         {
             StringBuilder result = new StringBuilder();
             if (StartEnd == SectionStartEnd.Start)
@@ -73,7 +73,7 @@ namespace Elistia.DotNetRtfWriter
                 }
                 if( SectionFooter != null )
                 {
-                    result.AppendLine( SectionFooter.render() );
+                    result.AppendLine( SectionFooter.Render() );
                 }
             }
             else
