@@ -113,67 +113,67 @@ namespace Openware.RTFWriter
             return block;
         }
 
-        /// <summary>
-        /// Add an image to this container from a file with filetype provided.
-        /// </summary>
-        /// <param name="imgFname">Filename of the image.</param>
-        /// <param name="imgType">File type of the image.</param>
-        /// <returns>Image being added.</returns>
-        public RtfImage AddImage(string imgFname, ImageFileType imgType)
-        {
-            if (!_allowImage) {
-                throw new Exception("Image is not allowed.");
-            }
-            RtfImage block = new RtfImage(imgFname, imgType);
-            AddBlock(block);
-            return block;
-        }
+        ///// <summary>
+        ///// Add an image to this container from a file with filetype provided.
+        ///// </summary>
+        ///// <param name="imgFname">Filename of the image.</param>
+        ///// <param name="imgType">File type of the image.</param>
+        ///// <returns>Image being added.</returns>
+        //public RtfImage AddImage(string imgFname, ImageFileType imgType)
+        //{
+        //    if (!_allowImage) {
+        //        throw new Exception("Image is not allowed.");
+        //    }
+        //    RtfImage block = new RtfImage(imgFname, imgType);
+        //    AddBlock(block);
+        //    return block;
+        //}
 
-        /// <summary>
-        /// Add an image to this container from a file. Will autodetect format from extension.
-        /// </summary>
-        /// <param name="imgFname">Filename of the image.</param>
-        /// <returns>Image being added.</returns>
-        public RtfImage AddImage(string imgFname)
-        {
-            int dot = imgFname.LastIndexOf(".");
-            if (dot < 0)
-            {
-                throw new Exception("Cannot determine image type from the filename extension: "
-                                    + imgFname);
-            }
+        ///// <summary>
+        ///// Add an image to this container from a file. Will autodetect format from extension.
+        ///// </summary>
+        ///// <param name="imgFname">Filename of the image.</param>
+        ///// <returns>Image being added.</returns>
+        //public RtfImage AddImage(string imgFname)
+        //{
+        //    int dot = imgFname.LastIndexOf(".");
+        //    if (dot < 0)
+        //    {
+        //        throw new Exception("Cannot determine image type from the filename extension: "
+        //                            + imgFname);
+        //    }
 
-            string ext = imgFname.Substring(dot + 1).ToLower();
-            switch (ext)
-            {
-                case "jpg":
-                case "jpeg":
-                    return AddImage(imgFname, ImageFileType.Jpg);
-                case "gif":
-                    return AddImage(imgFname, ImageFileType.Gif);
-                case "png":
-                    return AddImage(imgFname, ImageFileType.Png);
-                default:
-                    throw new Exception("Cannot determine image type from the filename extension: "
-                                        + imgFname);
-            }
-        }
+        //    string ext = imgFname.Substring(dot + 1).ToLower();
+        //    switch (ext)
+        //    {
+        //        case "jpg":
+        //        case "jpeg":
+        //            return AddImage(imgFname, ImageFileType.Jpg);
+        //        case "gif":
+        //            return AddImage(imgFname, ImageFileType.Gif);
+        //        case "png":
+        //            return AddImage(imgFname, ImageFileType.Png);
+        //        default:
+        //            throw new Exception("Cannot determine image type from the filename extension: "
+        //                                + imgFname);
+        //    }
+        //}
 
-        /// <summary>
-        /// Add an image to this container from a stream.
-        /// </summary>
-        /// <param name="imageStream">MemoryStream containing image.</param>
-        /// <returns>Image being added.</returns>
-        public RtfImage AddImage(System.IO.MemoryStream imageStream)
-        {
-            if (!_allowImage)
-            {
-                throw new Exception("Image is not allowed.");
-            }
-            RtfImage block = new RtfImage(imageStream);
-            AddBlock(block);
-            return block;
-        }
+        ///// <summary>
+        ///// Add an image to this container from a stream.
+        ///// </summary>
+        ///// <param name="imageStream">MemoryStream containing image.</param>
+        ///// <returns>Image being added.</returns>
+        //public RtfImage AddImage(System.IO.MemoryStream imageStream)
+        //{
+        //    if (!_allowImage)
+        //    {
+        //        throw new Exception("Image is not allowed.");
+        //    }
+        //    RtfImage block = new RtfImage(imageStream);
+        //    AddBlock(block);
+        //    return block;
+        //}
 
         /// <summary>
         /// Add a table to this container.

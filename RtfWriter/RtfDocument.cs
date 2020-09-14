@@ -125,11 +125,11 @@ namespace Openware.RTFWriter
             return new ColorDescriptor(_colorTable.IndexOf(color));
         }
 
-        public ColorDescriptor CreateColor(System.Drawing.Color color)
-        {
-            var rtfColor = new RtfColor(color.R, color.G, color.B);
-            return CreateColor(rtfColor);
-        }
+        //public ColorDescriptor CreateColor(System.Drawing.Color color)
+        //{
+        //    var rtfColor = new RtfColor(color.R, color.G, color.B);
+        //    return CreateColor(rtfColor);
+        //}
 
         public RtfTable AddTable(int rowCount, int colCount, float fontSize)
         {
