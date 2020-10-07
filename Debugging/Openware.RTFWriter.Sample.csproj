@@ -71,8 +71,8 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RtfWriter\Openware.RTFWriter.csproj">
-      <Project>{591bceb5-6b6f-4368-be6c-f89f668f7dcb}</Project>
+    <ProjectReference Include="..\Openware.RTFWriter\Openware.RTFWriter.csproj">
+      <Project>{e90785db-a0b4-4c2e-96d2-661a6d24e679}</Project>
       <Name>Openware.RTFWriter</Name>
     </ProjectReference>
   </ItemGroup>

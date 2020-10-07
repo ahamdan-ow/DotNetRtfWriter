@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openware.RTFWriter", "RtfWriter\Openware.RTFWriter.csproj", "{591BCEB5-6B6F-4368-BE6C-F89F668F7DCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openware.RTFWriterOld", "RtfWriter\Openware.RTFWriterOld.csproj", "{591BCEB5-6B6F-4368-BE6C-F89F668F7DCB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openware.RTFWriter.Sample", "Debugging\Openware.RTFWriter.Sample.csproj", "{B4B65481-AEB3-454A-9FCD-036C435D4DBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Openware.RTFWriter", "Openware.RTFWriter\Openware.RTFWriter.csproj", "{E90785DB-A0B4-4C2E-96D2-661A6D24E679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{B4B65481-AEB3-454A-9FCD-036C435D4DBA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B4B65481-AEB3-454A-9FCD-036C435D4DBA}.Release|x86.ActiveCfg = Release|x86
 		{B4B65481-AEB3-454A-9FCD-036C435D4DBA}.Release|x86.Build.0 = Release|x86
+		{E90785DB-A0B4-4C2E-96D2-661A6D24E679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90785DB-A0B4-4C2E-96D2-661A6D24E679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90785DB-A0B4-4C2E-96D2-661A6D24E679}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E90785DB-A0B4-4C2E-96D2-661A6D24E679}.Debug|x86.Build.0 = Debug|Any CPU
+		{E90785DB-A0B4-4C2E-96D2-661A6D24E679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90785DB-A0B4-4C2E-96D2-661A6D24E679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90785DB-A0B4-4C2E-96D2-661A6D24E679}.Release|x86.ActiveCfg = Release|Any CPU
+		{E90785DB-A0B4-4C2E-96D2-661A6D24E679}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,5 @@
+D:\Projects\RTFWriter\Openware.RTFWriter\bin\Release\Openware.RTFWriter.dll
+D:\Projects\RTFWriter\Openware.RTFWriter\bin\Release\Openware.RTFWriter.pdb
+D:\Projects\RTFWriter\Openware.RTFWriter\obj\Release\Openware.RTFWriter.csproj.CoreCompileInputs.cache
+D:\Projects\RTFWriter\Openware.RTFWriter\obj\Release\Openware.RTFWriter.dll
+D:\Projects\RTFWriter\Openware.RTFWriter\obj\Release\Openware.RTFWriter.pdb
